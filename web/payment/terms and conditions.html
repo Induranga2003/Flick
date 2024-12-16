@@ -5,16 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema Ticket Booking - Terms and Conditions</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/navbar.js" defer></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-             background-color: #000000;
+            font-family: 'Arial', sans-serif;
+    background-color: #111827; 
+    color: #ffff;
+    line-height: 1.6;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
         }
-        h1 {
+         .terms-con{
+            margin-top:30px;
+            padding:60px;
+            display: flex;
+             justify-content: center;
+              align-items: center;
+        }
+        
+        
+        
+        
+        .terms-section {
+    background-color:#1f2937;
+   justify-content: center;
+    align-items: center;
+     margin-top: 20px;
+    width: 60%;
+    padding: 20px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        
+        
+        
+        .terms-section h1 {
             text-align: center;
             color: white;
+            font-size: 32px;
         }
         h2 {
             color: white;
@@ -24,14 +56,20 @@
             margin: 10px 0;
             color: white;
         }
-        ul {
-            margin: 10px 0;
+        .terms-section ul {
+            margin: 10px ;
             padding-left: 20px;
             color: white;
         }
-        li {
+        .terms-section li {
             margin-bottom: 5px;
             color: white;
+        }
+        .terms-section a{
+            color: #55c1e7;
+        }
+        .terms-section a:hover{
+            color: blue ;
         }
         .button-container {
             text-align: center;
@@ -52,26 +90,80 @@
         .agree-button:hover {
             background-color:#3ba5d7;
         }
+       
+           
+        
+         #logo{
+            height: 45px;
+            margin-top: 3px;
+            /*margin-left: 13px;*/
+        }
+        #head{
+            height: 75px;
+        }
+        #navigation{
+            font-size:20px;
+        }
+        
     </style>
 </head>
 <body>
-    <header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="index.jsp"><img src="images/logo.png" alt="Cinema Logo"></a>
-        </div>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#book">Book Now</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <header id="head" class="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm shadow-lg">
+      <div class="container mx-auto flex justify-between items-center px-6 py-3">
+        <!-- Logo -->
+        <h1 class="text-3xl font-extrabold text-teal-300 tracking-wide"> 
+            <!--i changed it-->
+            <!--<a href="Dashboard/home.jsp"><img src="flick 2.png"/></a>-->
+            <a href="home.jsp"><img src="../images/logo.png" id="logo"></a>
+             <!--<a href="https://www.tesla.com/"><img src="logo.svg" class="i1"/></a>-->
+        </h1>
 
+        <!-- Navigation Menu (Desktop) -->
+        <nav id="navigation" class="hidden md:flex space-x-8 text-lg font-medium text-gray-300">
+          <a href="../home.jsp" class="hover:text-teal-300 transition duration-300">Home</a>
+          <a href="#about-us" class="hover:text-teal-300 transition duration-300">About Us</a>
+          <!--<a href="#upcoming-movies"" class="hover:text-teal-300 transition duration-300">Movies</a>-->
+          <a href="../movies.jsp" class="hover:text-teal-300 transition duration-300">Movies</a>
+          <!--<a href="movies.jsp" class="hover:text-teal-300 transition duration-300">Movies</a>-->
+          <a href="#faq" class="hover:text-teal-300 transition duration-300">FAQ</a>
+          <a href="register.html" class="hover:text-teal-300 transition duration-300">Sign up</a>
+        </nav>
+
+        <!-- Profile Section -->
+<!--        <div class="hidden md:flex items-center space-x-4">
+          <img src="resources/dashboard/home/profile.svg" alt="User Logo" class="w-10 h-10 rounded-full border-2 border-teal-300">
+          
+              
+          <span class="text-gray-300 font-medium">user@gmail.com</span>
+          
+          
+        </div>-->
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="block md:hidden text-teal-300 focus:outline-none">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav id="mobile-menu" class="hidden bg-gray-800 bg-opacity-90 md:hidden">
+        <ul class="flex flex-col space-y-4 text-lg font-medium text-gray-300 py-4 px-6">
+          <li><a href="#features" class="block hover:text-teal-300 transition duration-300">Features</a></li>
+          <li><a href="#movies" class="block hover:text-teal-300 transition duration-300">Movies</a></li>
+          <li><a href="#contact" class="block hover:text-teal-300 transition duration-300">Contact</a></li>
+          <li>
+            <div class="flex items-center space-x-4">
+              <img src="https://via.placeholder.com/40" alt="User Logo" class="w-10 h-10 rounded-full border-2 border-teal-300">
+              <span class="text-gray-300 font-medium">...</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="terms-con">
+        <div class="terms-section">
 <h1>Cinema Ticket Booking - Terms and Conditions</h1>
 
 <p>Welcome to our cinema! Before proceeding with your ticket booking, please take a moment to read and agree to the following terms and conditions:</p>
@@ -120,41 +212,67 @@
 <div class="button-container">
     <button class="agree-button" onclick="agreeTerms()">I Agree</button>
 </div>
-
+ </div>
+    </div>
 <script>
     function agreeTerms() {
         alert("Thank you for agreeing to the terms and conditions. Proceeding to booking...");
-        window.location.href = "index.jsp"; // Replace with your booking page URL
+        window.location.href = "../payment.jsp"; // Replace with your booking page URL
     }
 </script>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-section about">
-            <h3>About Us</h3>
-            <p>Your one-stop destination for booking cinema tickets easily and quickly. Experience movies like never before!</p>
-        </div>
-        <div class="footer-section links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="terms and conditions.html">Terms & Conditions</a></li>
-                <li><a href="Support Page.html">Support</a></li>
-            </ul>
-        </div>
-        <div class="footer-section social">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-                <a href="https://www.facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/"><img src="instagram-icon.png" alt="Instagram"></a>
-               
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 FlickBook | All Rights Reserved</p>
-    </div>
-</footer>
+<footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Section -->
+          <div>
+            <h3 class="text-teal-300 font-bold text-lg mb-4">About Us</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Welcome to SmBookings! Your ultimate destination for the latest movies and theater experiences.
+            </p>
+          </div>
 
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-teal-300 font-bold text-lg mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="../home.jsp" class="text-gray-300 hover:text-teal-300 transition">Home</a></li>
+              <li><a href="../movies.jsp" class="text-gray-300 hover:text-teal-300 transition">Top Movies</a></li>
+              <li><a href="../movies.jsp" class="text-gray-300 hover:text-teal-300 transition">Now Showing</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-teal-300 transition">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-teal-300 font-bold text-lg mb-4">Contact Us</h3>
+            <p class="text-gray-300 text-sm">
+              <strong>Email:</strong> support@smbookings.com<br>
+              <strong>Phone:</strong> +123 456 7890<br>
+              <strong>Address:</strong> 123 Cinema St, Movietown, USA
+            </p>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-teal-300 font-bold text-lg mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-teal-300">
+                <img src="resources/landing/fb.svg" loading="lazy" class="w-6 h-6" alt="Fb Icon">
+              </a>
+              <a href="#" class="text-gray-400 hover:text-teal-300">
+                <img src="resources/landing/twitter.svg" loading="lazy" class="w-6 h-6" alt="Twitter Icon">
+              </a>
+              <a href="#" class="text-gray-400 hover:text-teal-300">
+                <img src="resources/landing/insta.svg" loading="lazy" class="w-6 h-6" alt="Insta Icon">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+          &copy; 2024 SmBookings. All Rights Reserved. | <a href="privacy-policy.html" class="text-teal-300 hover:underline">Privacy Policy</a>
+        </div>
+      </footer>
 </body>
 </html>

@@ -19,7 +19,7 @@ public class UserServlet extends HttpServlet {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/movie_booking";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Nan#3rdSqlWish.";
+    private static final String DB_PASSWORD = "Dilshan2003";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {

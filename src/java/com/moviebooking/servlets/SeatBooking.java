@@ -41,7 +41,7 @@ public class SeatBooking extends HttpServlet {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "Nan#3rdSqlWish.");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "Dilshan2003");
 
             // Check if seat is already booked
             String checkSql = "SELECT seat_number FROM seats WHERE show_time_id = ? AND seat_number = ?";
