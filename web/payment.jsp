@@ -159,7 +159,7 @@
                 <h2>Purchase Summary</h2>
                 <table id="summary-table">
                     <tr>
-                        <td>ADULT Ticket (x <span id="ticketCount">1</span>)</td>
+                        <td>Tickets (x <span id="ticketCount">1</span>)</td>
                         <td>USD <span id="ticketPrice">0.00</span></td>
                     </tr>
                     <tr>
